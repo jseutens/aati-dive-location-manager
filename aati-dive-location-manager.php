@@ -54,8 +54,8 @@ function aatidlm_show_warning_message() {
    ?>
     <div class="notice notice-warning">
        <p><?php _e('You will need the Location Profile Information plugin to be able to use dive locations for multiple offices.', AATIDLM_TEXTDOMAIN); ?></p>
-   </div>    <? php
-//}
+   </div>    <?php
+}
 // Check if the Location Profile Information is  not active
 $location_profile_plugin = 'aatilpi/aatilpi.php';
 if (!aatidlm_active_plugins_contains($location_profile_plugin)) {
