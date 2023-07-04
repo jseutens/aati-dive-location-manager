@@ -1,0 +1,36 @@
+.aatidlm-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.aatidlm-table label {
+  vertical-align: top;
+  width: 25ch;
+  display: inline-block;
+}
+.aatidlm-table input {
+  vertical-align: top;
+}
+.aatidlm-table th,
+.aatidlm-table td {
+  border: 1px solid #ccc;
+  padding: .5rem;
+  text-align: left;
+}
+
+.aatidlm-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.aatidlm-table-h2 {
+  text-align: center;
+  font-size: larger;
+}
+
+.aatidlm-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.aatidlm-description{
+  font-size: x-small;
+}
+
