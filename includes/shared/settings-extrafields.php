@@ -22,10 +22,10 @@ function aatidlm_display_table_header($title) {
             <th colspan="4"><h2 class="aatidlm-table-h2"><?php echo $title; ?></h2></th>
         </tr>
         <tr>
-            <th><h3><?php _e('Field', AATILPI_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Display', AATILPI_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Order', AATILPI_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Visual', AATILPI_TEXTDOMAIN); ?></h3></th>
+            <th><h3><?php _e('Field', AATIDLM_TEXTDOMAIN); ?></h3></th>
+            <th><h3><?php _e('Display', AATIDLM_TEXTDOMAIN); ?></h3></th>
+            <th><h3><?php _e('Order', AATIDLM_TEXTDOMAIN); ?></h3></th>
+            <th><h3><?php _e('Visual', AATIDLM_TEXTDOMAIN); ?></h3></th>
         </tr>
     </thead>
     <?php
@@ -116,14 +116,14 @@ function aatidlm_custom_field_meta_box_callback($post) {
 
 	
 ?>
-<div class="aatidlm-description"><?php _e('The first field is the value, the second field is what will be visible for the visitor , leave the second field empty if you want to use the first field also as displayed for the visitor', AATILPI_TEXTDOMAIN); ?></div>
+<div class="aatidlm-description"><?php _e('The first field is the value, the second field is what will be visible for the visitor , leave the second field empty if you want to use the first field also as displayed for the visitor', AATIDLM_TEXTDOMAIN); ?></div>
 <table class="aatidlm-table">
 <tbody>
 <?php
 // display all the fields per group
-aatidlm_display_fields(__('Contact Data', AATILPI_TEXTDOMAIN), AATILPI_CONTACT_DATA,$post->ID);
-aatidlm_display_fields(__('Legal Information', AATILPI_TEXTDOMAIN), AATILPI_LEGAL_INFO,$post->ID);
-aatidlm_display_fields(__('Social Media', AATILPI_TEXTDOMAIN), AATILPI_SOCIAL_MEDIA,$post->ID);
+aatidlm_display_fields(__('Contact Data', AATIDLM_TEXTDOMAIN), AATILPI_CONTACT_DATA,$post->ID);
+aatidlm_display_fields(__('Legal Information', AATIDLM_TEXTDOMAIN), AATILPI_LEGAL_INFO,$post->ID);
+aatidlm_display_fields(__('Social Media', AATIDLM_TEXTDOMAIN), AATILPI_SOCIAL_MEDIA,$post->ID);
 ?>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ function aatidlm_custom_field_save_postdata($post_id, $post) {
         return;
     }
 
-    $aatidlm_fields_array = AATILPI_FIELDS_ARRAY;
+    $aatidlm_fields_array = AATIDLM_FIELDS_ARRAY;
 
     foreach ($aatidlm_fields_array as $field) {
         $custom_field_valuename = $field[1];

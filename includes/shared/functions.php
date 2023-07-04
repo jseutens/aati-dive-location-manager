@@ -1,18 +1,18 @@
 <?php
 function aatidlm_register_location_post_type() {
     $labels = array(
-        'name' => __('Dive Locations', AATILPI_TEXTDOMAIN),
-        'singular_name' => __('Dive Location', AATILPI_TEXTDOMAIN),
-        'add_new'            => __('Add New', AATILPI_TEXTDOMAIN),
-        'add_new_item'       => __('Add New Event', AATILPI_TEXTDOMAIN),
-        'edit_item'          => __('Edit Event', AATILPI_TEXTDOMAIN),
-        'new_item'           => __('New Event', AATILPI_TEXTDOMAIN),
-        'all_items'          => __('All Events', AATILPI_TEXTDOMAIN),
-        'view_item'          => __('View Event', AATILPI_TEXTDOMAIN),
-        'search_items'       => __('Search Events', AATILPI_TEXTDOMAIN),
-        'not_found'          => __('No events found', AATILPI_TEXTDOMAIN),
-        'not_found_in_trash' => __('No events found in Trash', AATILPI_TEXTDOMAIN),
-        'menu_name'          => __('Dive Locations', AATILPI_TEXTDOMAIN)
+        'name' => __('Dive Locations', AATIDLM_TEXTDOMAIN),
+        'singular_name' => __('Dive Location', AATIDLM_TEXTDOMAIN),
+        'add_new'            => __('Add New', AATIDLM_TEXTDOMAIN),
+        'add_new_item'       => __('Add New Dive Location', AATIDLM_TEXTDOMAIN),
+        'edit_item'          => __('Edit Dive Location', AATIDLM_TEXTDOMAIN),
+        'new_item'           => __('New Dive Location', AATIDLM_TEXTDOMAIN),
+        'all_items'          => __('All Dive Locations', AATIDLM_TEXTDOMAIN),
+        'view_item'          => __('View Dive Location', AATIDLM_TEXTDOMAIN),
+        'search_items'       => __('Search Events', AATIDLM_TEXTDOMAIN),
+        'not_found'          => __('No Dive Location found', AATIDLM_TEXTDOMAIN),
+        'not_found_in_trash' => __('No Dive Location found in Trash', AATIDLM_TEXTDOMAIN),
+        'menu_name'          => __('Dive Locations', AATIDLM_TEXTDOMAIN)
     );
 
     $permalink_slug = get_option('aatidlm_permalink', 'dive-sites');
@@ -52,7 +52,7 @@ function aatidlm_location_columns($columns) {
     $new_columns = array();
     foreach ($columns as $key => $value) {
         if ($key == 'date') {
-            $new_columns['menu_order'] = __('Order', AATILPI_TEXTDOMAIN);
+            $new_columns['menu_order'] = __('Order', AATIDLM_TEXTDOMAIN);
         }
         $new_columns[$key] = $value;
     }

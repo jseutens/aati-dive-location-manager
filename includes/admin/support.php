@@ -8,13 +8,13 @@
         <h2><?php _e('How to contact us', AATIDLM_TEXTDOMAIN); ?></h2>
         <p><?php _e('If you need assistance or have any questions, please contact us at', AATIDLM_TEXTDOMAIN); ?> <a href="mailto:support@aati.be">support@aati.be</a>.</p>
 
-        <h2><?php _e('Locations', AATIDLM_TEXTDOMAIN); ?></h2>
+        <h2><?php _e('Dive Locations', AATIDLM_TEXTDOMAIN); ?></h2>
         <div class="aatidlm-locations-table-container">
             <table class="aatidlm-locations-table">
                 <thead>
                     <tr>
                         <th><?php _e('Shortcode', AATIDLM_TEXTDOMAIN); ?></th>
-                        <th><?php _e('Location Name', AATIDLM_TEXTDOMAIN); ?></th>
+                        <th><?php _e('Dive Location Name', AATIDLM_TEXTDOMAIN); ?></th>
                     </tr>
                 </thead>
                 <tbody>
