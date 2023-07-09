@@ -3,7 +3,7 @@
 function aatidlm_custom_field_meta_box() {
     add_meta_box(
         'aatidlm_custom_field_meta_box_id', // Unique ID
-        'Contact location data ', // Title
+        'Dive location data ', // Title
         'aatidlm_custom_field_meta_box_callback', // Callback function
         'aatidlm_location', // Custom post type
         'normal', // Context (normal, side, advanced)
@@ -54,10 +54,10 @@ function aatidlm_display_fields($title, $aatidlm_display_array ,$post_id_locatio
 	$order_field_value=get_post_meta($post_id_location,$custom_field_valuename.'_order', true);
 	$yes_no_field_value=get_post_meta($post_id_location, $custom_field_valuename.'_visual', true);
     if (empty($custom_field_value)) {
-        $custom_field_value = '';
+        $custom_field_value = $custom_field_name;
     }
     if (empty($custom_fieldname_value)) {
-     //   $custom_fieldname_value = '';
+      // $custom_fieldname_value = '';
     }
     if (empty($order_field_value)) {
         $order_field_value = $order_field_default;
@@ -111,19 +111,17 @@ function aatidlm_display_fields($title, $aatidlm_display_array ,$post_id_locatio
  // end loop of fields 
 }
 function aatidlm_custom_field_meta_box_callback($post) {
-	$aatidlm_fields_array = AATILPI_FIELDS_ARRAY;
+	$aatidlm_fields_array = AATIDLM_FIELDS_ARRAY;
 	wp_nonce_field('aatidlm_custom_field_meta_box', 'aatidlm_custom_field_meta_box_nonce');
 
 	
 ?>
-<div class="aatidlm-description"><?php _e('The first field is the value, the second field is what will be visible for the visitor , leave the second field empty if you want to use the first field also as displayed for the visitor', AATIDLM_TEXTDOMAIN); ?></div>
+<div class="aatidlm-description"><?php _e('The first field is the display text explanation, the second field is the value that is applicable.', AATIDLM_TEXTDOMAIN); ?></div>
 <table class="aatidlm-table">
 <tbody>
 <?php
 // display all the fields per group
-aatidlm_display_fields(__('Contact Data', AATIDLM_TEXTDOMAIN), AATILPI_CONTACT_DATA,$post->ID);
-aatidlm_display_fields(__('Legal Information', AATIDLM_TEXTDOMAIN), AATILPI_LEGAL_INFO,$post->ID);
-aatidlm_display_fields(__('Social Media', AATIDLM_TEXTDOMAIN), AATILPI_SOCIAL_MEDIA,$post->ID);
+aatidlm_display_fields(__('Dive Location Data', AATIDLM_TEXTDOMAIN), AATIDLM_DIVELOCATION_DATA,$post->ID);
 ?>
 </tbody>
 </table>

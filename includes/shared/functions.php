@@ -29,7 +29,7 @@ function aatidlm_register_location_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array('title','editor','excerpt','custom-fields','revisions','thumbnail','author','page-attributes',)
+        'supports'           => array('title','editor','revisions','thumbnail','author','page-attributes',)
     );
 
     register_post_type('aatidlm_location', $args);
