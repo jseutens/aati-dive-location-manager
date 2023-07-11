@@ -1,5 +1,4 @@
 === AATI Dive Location Manager ===
-
 Contributors: jseutens
 Tags: dive, location, manager, diving center
 Requires at least: 6.2
@@ -42,13 +41,11 @@ Initial release of AATI Dive Location Manager.
 
 == Screenshots ==
 
-1. Screenshot 1: [Description of the screenshot]
-2. Screenshot 2: [Description of the screenshot]
+1. ![Screenshot 1](screenshots/screenshot-1.png)
+   Description of the screenshot.
 
-== Upgrade Notice ==
-
-= 1.0 =
-Initial release of AATI Dive Location Manager.
+2. ![Screenshot 2](screenshots/screenshot-2.png)
+   Description of the screenshot.
 
 == Support ==
 
@@ -72,7 +69,6 @@ No personal data is collected or stored by this plugin.
 
 == Additional Notes ==
 
-- This plugin requires WordPress version 4.7 or higher.
-- Compatible up to WordPress version 5.8.
+- This plugin requires WordPress version 6.2 or higher.
 - This plugin is actively maintained and supported.
 - Please remember to always keep your plugins updated for security and stability reasons.

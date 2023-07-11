@@ -49,13 +49,30 @@ function aatidlm_active_plugins_contains( $name ) {
     }
     return false;
 }
-// no need for a warning , if aati location manager is installed use this to connect the dive site to a certain location of your office
+// need for a warning , if aati location manager is installed use this to connect the dive site to a certain location of your office
 function aatidlm_show_warning_message() {
-   ?>
-    <div class="notice notice-warning">
-       <p><?php _e('You will need the Location Profile Information plugin to be able to use dive locations for multiple offices.', AATIDLM_TEXTDOMAIN); ?></p>
-   </div>    <?php
+    $dismissed_timestamp = get_option( 'aatidlm_warning_dismissed' );
+
+    // Set the duration for the warning to reappear (in seconds)
+    $expiration_duration = 2592000; // 30 days
+
+    // Check if the warning has been dismissed or if the expiration time has passed
+    if ( ! $dismissed_timestamp || ( time() - $dismissed_timestamp ) > $expiration_duration ) {
+        ?>
+        <div class="notice notice-warning is-dismissible">
+            <p><?php _e( 'You will need the Location Profile Information plugin to be able to use dive locations for multiple offices.', AATIDLM_TEXTDOMAIN ); ?></p>
+        </div>
+        <?php
+    }
 }
+
+// Dismiss the warning message when the "Dismiss" button is clicked
+function aatidlm_dismiss_warning() {
+    update_option( 'aatidlm_warning_dismissed', time() );
+}
+add_action( 'admin_init', 'aatidlm_dismiss_warning' );
+
+//
 // Check if the Location Profile Information is  not active
 $location_profile_plugin = 'aatilpi/aatilpi.php';
 if (!aatidlm_active_plugins_contains($location_profile_plugin)) {
@@ -90,7 +107,7 @@ require_once( AATIDLM_PLUGIN_DIR . '/includes/shared/settings-extrafields.php' )
 require_once( AATIDLM_PLUGIN_DIR . '/includes/admin/menu.php');
 // Render support page
 function aatidlm_support_page() {
-    require_once(AATIDLM_PLUGIN_DIR . '/includes/support.php');
+    require_once(AATIDLM_PLUGIN_DIR . '/includes/admin/support.php');
 }
 // uninstall procedure
 register_uninstall_hook( __FILE__, 'aatidlm_uninstall' );
