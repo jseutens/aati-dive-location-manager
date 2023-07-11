@@ -1,5 +1,5 @@
 <?php
-function aatilpi_location_shortcode($atts) {
+function aatidlm_location_shortcode($atts) {
     // Parse shortcode attributes
     $atts = shortcode_atts(array(
         'location' => '', // The ID of the location to display
