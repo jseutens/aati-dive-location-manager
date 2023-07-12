@@ -1,0 +1,284 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AATI Dive Location Manager\n"
+"POT-Creation-Date: 2023-07-12 09:30+0200\n"
+"PO-Revision-Date: 2023-07-12 09:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: aati-dive-location-manager.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: aati-dive-location-manager.php:63
+msgid ""
+"You will need the Location Profile Information plugin to be able to use dive "
+"locations for multiple offices."
+msgstr ""
+"Je hebt de plug-in Location Profile Information nodig om duiklocaties voor "
+"meerdere kantoren te kunnen gebruiken."
+
+#: includes/admin/menu.php:5
+msgid "Dive Location settings"
+msgstr "Instellingen duiklocatie"
+
+#: includes/admin/menu.php:6
+msgid "Settings"
+msgstr "Instellingen"
+
+#: includes/admin/menu.php:13
+msgid "Dive Location support"
+msgstr "Ondersteuning voor duiklocaties"
+
+#: includes/admin/menu.php:14
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: includes/admin/support.php:2
+msgid "Dive Location Manager Support"
+msgstr "Dive Location Manager Ondersteuning"
+
+#: includes/admin/support.php:3
+msgid "How to use the Dive Location Manager shortcode"
+msgstr "Hoe gebruik je de shortcode van Dive Location Manager"
+
+#: includes/admin/support.php:4
+msgid "To display a location, use the following shortcode:"
+msgstr "Als u een locatie wilt weergeven, gebruikt u de volgende shortcode:"
+
+#: includes/admin/support.php:6
+msgid ""
+"Replace \"ID\" with the ID of the location you want to display. If no ID is "
+"provided, the first location will be used."
+msgstr ""
+"Vervang \"ID\" door de ID van de locatie die u wilt weergeven. Als er geen "
+"ID wordt verstrekt, wordt de eerste locatie gebruikt."
+
+#: includes/admin/support.php:8
+msgid "How to contact us"
+msgstr "Hoe kunt u contact met ons opnemen"
+
+#: includes/admin/support.php:9
+msgid "If you need assistance or have any questions, please contact us at"
+msgstr ""
+"Als u hulp nodig heeft of vragen heeft, neem dan contact met ons op via"
+
+#: includes/admin/support.php:11 includes/shared/functions.php:4
+#: includes/shared/functions.php:15
+msgid "Dive Locations"
+msgstr "Duiklocaties"
+
+#: includes/admin/support.php:16
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/admin/support.php:17
+msgid "Dive Location Name"
+msgstr "Naam duiklocatie"
+
+#: includes/shared/functions.php:5
+msgid "Dive Location"
+msgstr "Duiklocatie"
+
+#: includes/shared/functions.php:6
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: includes/shared/functions.php:7
+msgid "Add New Dive Location"
+msgstr "Nieuwe duiklocatie toevoegen"
+
+#: includes/shared/functions.php:8
+msgid "Edit Dive Location"
+msgstr "Duiklocatie bewerken"
+
+#: includes/shared/functions.php:9
+msgid "New Dive Location"
+msgstr "Nieuwe duiklocatie"
+
+#: includes/shared/functions.php:10
+msgid "All Dive Locations"
+msgstr "Alle duiklocaties"
+
+#: includes/shared/functions.php:11
+msgid "View Dive Location"
+msgstr "Bekijk duiklocatie"
+
+#: includes/shared/functions.php:12
+msgid "Search Events"
+msgstr "Evenementen zoeken"
+
+#: includes/shared/functions.php:13
+msgid "No Dive Location found"
+msgstr "Geen duiklocatie gevonden"
+
+#: includes/shared/functions.php:14
+msgid "No Dive Location found in Trash"
+msgstr "Geen duiklocatie gevonden in prullenbak"
+
+#: includes/shared/functions.php:55 includes/shared/settings-extrafields.php:27
+msgid "Order"
+msgstr "Volgorde"
+
+#: includes/shared/output-fields.php:53
+msgid "External Link"
+msgstr "Externe link"
+
+#: includes/shared/settings-extrafields.php:25
+msgid "Field"
+msgstr "Veld"
+
+#: includes/shared/settings-extrafields.php:26
+msgid "Display"
+msgstr "Weergave"
+
+#: includes/shared/settings-extrafields.php:28
+msgid "Visual"
+msgstr "Visueel"
+
+#: includes/shared/settings-extrafields.php:119
+msgid ""
+"The first field is the display text explanation, the second field is the "
+"value that is applicable."
+msgstr ""
+"Het eerste veld is de uitleg van de weergavetekst, het tweede veld is de "
+"waarde die van toepassing is."
+
+#: includes/shared/settings-extrafields.php:124
+msgid "Dive Location Data"
+msgstr "Gegevens van duiklocaties"
+
+#: includes/shared/settings-fields.php:4
+msgid "Dive type :"
+msgstr "Soort duik :"
+
+#: includes/shared/settings-fields.php:4
+msgid "What type of dive is this, reef, cave, etc"
+msgstr "Wat voor soort duik is dit, rif, grot, etc"
+
+#: includes/shared/settings-fields.php:5
+msgid "Gps Coordinates :"
+msgstr "GPS-coördinaten :"
+
+#: includes/shared/settings-fields.php:5
+msgid "GPS coordinates seperated with a comma"
+msgstr "GPS-coördinaten gescheiden met een komma"
+
+#: includes/shared/settings-fields.php:6
+msgid "Dive depth :"
+msgstr "Duik diepte :"
+
+#: includes/shared/settings-fields.php:6
+msgid "The maximum dive depth"
+msgstr "De maximale duikdiepte"
+
+#: includes/shared/settings-fields.php:7
+msgid "Diver level :"
+msgstr "Duiker niveau :"
+
+#: includes/shared/settings-fields.php:7
+msgid "What type of divers , starter ,advanced, etc"
+msgstr "Wat voor soort duikers, starter, gevorderden, etc"
+
+#: includes/shared/settings-fields.php:8
+msgid "Current :"
+msgstr "Stroming :"
+
+#: includes/shared/settings-fields.php:8
+msgid "Is the current strong or medium ,etc"
+msgstr "Is de stroom sterk of medium ,etc"
+
+#: includes/shared/settings-fields.php:9
+msgid "Area :"
+msgstr "Gebied :"
+
+#: includes/shared/settings-fields.php:9
+msgid "Protected marine area ,etc"
+msgstr "Beschermd zeegebied, enz"
+
+#: includes/shared/settings-fields.php:10
+msgid "Visibility :"
+msgstr "Zichtbaarheid:"
+
+#: includes/shared/settings-fields.php:10
+msgid "How far could we possibly see normaly, example 15m-30m "
+msgstr "Hoe ver zouden we normaal kunnen zien, voorbeeld 15m-30m "
+
+#: includes/shared/settings-fields.php:11
+msgid "Time to reach :"
+msgstr "Tijd om te bereiken :"
+
+#: includes/shared/settings-fields.php:11
+msgid ""
+"How long does it normaly take to arrive at the destination in min. example "
+"35min"
+msgstr ""
+"Hoe lang duurt het normaal om in min. voorbeeld 35min op de bestemming aan "
+"te komen"
+
+#: includes/shared/settings-fields.php:12
+msgid "Season :"
+msgstr "Seizoen:"
+
+#: includes/shared/settings-fields.php:12
+msgid "All saesons , only monsoon etc"
+msgstr "Alle saesons, alleen moesson etc"
+
+#: includes/shared/settings-permalink.php:7
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+#: includes/shared/settings-permalink.php:13
+msgid "Custom Permalink"
+msgstr "Afwijkende URL voor activiteit"
+
+#: includes/shared/settings-permalink.php:26
+msgid "Dive Location Manager Settings"
+msgstr "Instellingen voor Duiklocatiebeheer"
+
+#: includes/shared/settings-permalink.php:40
+msgid "General settings for the Dive Location Manager plugin."
+msgstr "Algemene instellingen voor de Dive Location Manager plugin."
+
+#: includes/shared/settings-permalink.php:47
+msgid ""
+"Enter a custom permalink structure for dive location entries. Make sure this "
+"does not conflict with any existing page or post slug."
+msgstr ""
+"Voer een aangepaste permalinkstructuur in voor vermeldingen van "
+"duiklocaties. Zorg ervoor dat dit niet conflicteert met een bestaande pagina "
+"of berichtslug."
+
+#: includes/shared/shortcode.php:23
+msgid "The specified dive location does not exist."
+msgstr "De opgegeven duiklocatie bestaat niet."
+
+#. Plugin Name of the plugin/theme
+msgid "AATI Dive Location Manager"
+msgstr "AATI Duik Locatie Manager"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/jseutens/aati-dive-location-manager"
+msgstr "https://github.com/jseutens/aati-dive-location-manager"
+
+#. Description of the plugin/theme
+msgid "Manage the Dive locations of your diving center"
+msgstr "Beheer de duiklocaties van uw duikcentrum"
+
+#. Author of the plugin/theme
+msgid "Johan Seutens"
+msgstr "Johan Seutens"
+
+#. Author URI of the plugin/theme
+msgid "https://www.aati.be"
+msgstr "https://www.aati.be"
