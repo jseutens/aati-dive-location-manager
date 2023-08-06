@@ -21,7 +21,7 @@
                     <?php
                     $locations = aatidlm_get_ordered_locations();
                     foreach ($locations as $location) {
-                        $shortcode = '[contact-card location=' . $location->ID . ']';
+                        $shortcode = '[AATIDLM location=' . $location->ID . ']';
                         $name = get_the_title($location->ID);
                         ?>
                         <tr>
