@@ -1,4 +1,7 @@
 <?php
+// Check if the ABSPATH constant is defined
+if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
+//
 // add custom field group 
 function aatidlm_custom_field_meta_box() {
     add_meta_box(
@@ -22,10 +25,10 @@ function aatidlm_display_table_header($title) {
             <th colspan="4"><h2 class="aatidlm-table-h2"><?php echo $title; ?></h2></th>
         </tr>
         <tr>
-            <th><h3><?php _e('Field', AATIDLM_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Display', AATIDLM_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Order', AATIDLM_TEXTDOMAIN); ?></h3></th>
-            <th><h3><?php _e('Visual', AATIDLM_TEXTDOMAIN); ?></h3></th>
+            <th><h3><?php _e('Field', 'aati-dive-location-manager'); ?></h3></th>
+            <th><h3><?php _e('Display', 'aati-dive-location-manager'); ?></h3></th>
+            <th><h3><?php _e('Order', 'aati-dive-location-manager'); ?></h3></th>
+            <th><h3><?php _e('Visual', 'aati-dive-location-manager'); ?></h3></th>
         </tr>
     </thead>
     <?php
@@ -116,12 +119,12 @@ function aatidlm_custom_field_meta_box_callback($post) {
 
 	
 ?>
-<div class="aatidlm-description"><?php _e('The first field is the display text explanation, the second field is the value that is applicable.', AATIDLM_TEXTDOMAIN); ?></div>
+<div class="aatidlm-description"><?php _e('The first field is the display text explanation, the second field is the value that is applicable.', 'aati-dive-location-manager'); ?></div>
 <table class="aatidlm-table">
 <tbody>
 <?php
 // display all the fields per group
-aatidlm_display_fields(__('Dive Location Data', AATIDLM_TEXTDOMAIN), AATIDLM_DIVELOCATION_DATA,$post->ID);
+aatidlm_display_fields(__('Dive Location Data', 'aati-dive-location-manager'), AATIDLM_DIVELOCATION_DATA,$post->ID);
 ?>
 </tbody>
 </table>

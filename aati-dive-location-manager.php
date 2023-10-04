@@ -6,25 +6,24 @@ Description: Manage the Dive locations of your diving center
 Version: 1.0
 Author: Johan Seutens
 Author URI: https://www.aati.be
-Text Domain: aatidlm
+Text Domain: aati-dive-location-manager
 Domain Path: /languages/
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 // Check if the ABSPATH constant is defined
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
 // Define constants used throughout the plugin
 define( 'AATIDLM_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'AATIDLM_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'AATIDLM_PLUGIN_FNAME', plugin_basename( __FILE__ ) );
 define( 'AATIDLM_PLUGIN_DIRNAME', plugin_basename( dirname( __FILE__ ) ) );
-define( 'AATIDLM_VERSION', '1.0.0' );
-define( 'AATIDLM_TEXTDOMAIN', 'aatidlm');
+define( 'AATIDLM_VERSION', '1.0' );
+//don't use this anymore
+//define( 'AATIDLM_TEXTDOMAIN', 'aati-dive-location-manager');
 // load languages
 	function aatidlm_load_textdomain() {
-		load_plugin_textdomain(AATIDLM_TEXTDOMAIN,false, AATIDLM_PLUGIN_DIRNAME. '/languages');
+		load_plugin_textdomain('aati-dive-location-manager',false, AATIDLM_PLUGIN_DIRNAME. '/languages');
 	}
 	add_action( 'plugins_loaded', 'aatidlm_load_textdomain');
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
@@ -60,7 +59,7 @@ function aatidlm_show_warning_message() {
     if ( ! $dismissed_timestamp || ( time() - $dismissed_timestamp ) > $expiration_duration ) {
         ?>
         <div class="notice notice-warning is-dismissible">
-            <p><?php _e( 'You will need the Location Profile Information plugin to be able to use dive locations for multiple offices.', AATIDLM_TEXTDOMAIN ); ?></p>
+            <p><?php _e( 'You will need the Location Profile Information plugin to be able to use dive locations for multiple offices.', 'aati-dive-location-manager' ); ?></p>
         </div>
         <?php
     }

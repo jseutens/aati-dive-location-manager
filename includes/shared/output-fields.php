@@ -1,4 +1,7 @@
 <?php
+// Check if the ABSPATH constant is defined
+if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
+//
 function output_html_based_on_field($fields_array) {
     foreach ($fields_array as $field) {
         $second_field = $field[1];

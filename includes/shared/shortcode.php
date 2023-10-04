@@ -1,4 +1,7 @@
 <?php
+// Check if the ABSPATH constant is defined
+if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
+//
 function aatidlm_location_shortcode($atts) {
     // Parse shortcode attributes
     $atts = shortcode_atts(array(
@@ -20,7 +23,7 @@ function aatidlm_location_shortcode($atts) {
 
     // If the location does not exist or is not a location post type, return an error message
     if (!$location || $location->post_type !== 'aatidlm_location') {
-        return '<p>' . __('The specified dive location does not exist.', AATIDLM_TEXTDOMAIN) . '</p>';
+        return '<p>' . __('The specified dive location does not exist.', 'aati-dive-location-manager') . '</p>';
     }
 //	$output_html = $location->post_title;
     // Render the location 
