@@ -1,6 +1,6 @@
 <?php
 // Check if the ABSPATH constant is defined
-if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
+if ( ! defined( 'ABSPATH' ) ) {exit; }// Exit if accessed directly}
 //
 // Register settings
 function aatidlm_register_settings() {

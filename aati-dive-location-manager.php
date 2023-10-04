@@ -12,7 +12,7 @@ License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 // Check if the ABSPATH constant is defined
-if ( ! defined( 'ABSPATH' ) ) {exit; // Exit if accessed directly}
+if ( ! defined( 'ABSPATH' ) ) {exit;}// Exit if accessed directly
 // Define constants used throughout the plugin
 define( 'AATIDLM_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'AATIDLM_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
