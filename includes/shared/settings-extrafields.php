@@ -132,11 +132,90 @@ aatidlm_display_fields(__('Dive Location Data', 'aati-dive-location-manager'), A
 }
 
 //saving the stuff
+
+
+function aatidlm_custom_field_save_postdata($post_id, $post) {
+    // Sanitize $post_id
+    $post_id = is_numeric($post_id) ? intval($post_id) : 0;
+
+    // Validate $post
+    if (!($post instanceof WP_Post)) {
+        error_log('Invalid $post object');
+        return;
+    }
+    // Sanitize and store nonce value
+    $aatidlm_nonce = isset($_POST['aatidlm_custom_field_meta_box_nonce']) ? sanitize_text_field($_POST['aatidlm_custom_field_meta_box_nonce']) : '';
+
+    if (empty($aatidlm_nonce) || !wp_verify_nonce($aatidlm_nonce, 'aatidlm_custom_field_meta_box')) {
+        return;
+    }
+
+    // Check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Check user capabilities
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Check if AATIDLM_FIELDS_ARRAY is defined
+    if (!defined('AATIDLM_FIELDS_ARRAY')) {
+        error_log('AATIDLM_FIELDS_ARRAY is not defined');
+        return;
+    }
+    $aatidlm_fields_array = AATIDLM_FIELDS_ARRAY;
+
+    foreach ($aatidlm_fields_array as $field) {
+        $custom_field_valuename = sanitize_key($field[1]);
+        $custom_field_type = sanitize_key($field[2]);
+
+        // Sanitize $_POST data
+        $sanitized_post_data = $custom_field_type == "textarea" ? 
+            sanitize_textarea_field($_POST[$custom_field_valuename] ?? '') : 
+            sanitize_text_field($_POST[$custom_field_valuename] ?? '');
+
+        $sanitized_name_data = sanitize_text_field($_POST[$custom_field_valuename . '_name'] ?? '');
+        $sanitized_order_data = is_numeric($_POST[$custom_field_valuename . '_order'] ?? null) ? 
+            intval($_POST[$custom_field_valuename . '_order']) : 
+            null;
+
+        $sanitized_visual_data = sanitize_key($_POST[$custom_field_valuename . '_visual'] ?? '');
+
+        // Use sanitized data in conditions and database operations
+        if (!empty($sanitized_post_data)) {
+            if (false === update_post_meta($post_id, $custom_field_valuename, $sanitized_post_data)) {
+                error_log("Failed to update meta for $custom_field_valuename");
+            }
+        }
+
+        if (!empty($sanitized_name_data)) {
+            if (false === update_post_meta($post_id, $custom_field_valuename . '_name', $sanitized_name_data)) {
+                error_log("Failed to update meta for {$custom_field_valuename}_name");
+            }
+        }
+
+        if ($sanitized_order_data !== null) {
+            if (false === update_post_meta($post_id, $custom_field_valuename . '_order', $sanitized_order_data)) {
+                error_log("Failed to update meta for {$custom_field_valuename}_order");
+            }
+        }
+
+        if (!empty($sanitized_visual_data)) {
+            if (false === update_post_meta($post_id, $custom_field_valuename . '_visual', $sanitized_visual_data)) {
+                error_log("Failed to update meta for {$custom_field_valuename}_visual");
+            }
+        }
+    }
+}
+
+
+
 function aatidlm_custom_field_save_postdata($post_id, $post) {
     if (!isset($_POST['aatidlm_custom_field_meta_box_nonce'])) {
         return;
     }
-
     if (!wp_verify_nonce($_POST['aatidlm_custom_field_meta_box_nonce'], 'aatidlm_custom_field_meta_box')) {
         return;
     }
